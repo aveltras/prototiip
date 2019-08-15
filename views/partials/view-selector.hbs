@@ -1,0 +1,13 @@
+<div id="prototiip-selector-ctr">
+  <select id="prototiip-view-selector">
+    {{#each prototiipPages}}
+    <option value="{{this.url}}" {{#if this.selected}}selected{{/if}}>{{this.label}}</option>
+    {{/each}}
+  </select>
+  {{#if prototiipModes}}
+  {{#each prototiipModes}}
+  <button class="prototiip-mode-selector {{#if this.selected}}prototiip-selected{{/if}}"
+    data-prototiip-mode="{{this.code}}">{{this.label}}</button>
+  {{/each}}
+  {{/if}}
+</div>
